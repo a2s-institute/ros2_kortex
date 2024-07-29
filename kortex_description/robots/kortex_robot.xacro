@@ -21,6 +21,7 @@
     use_internal_bus_gripper_comm:=false
     use_fake_hardware:=false
     fake_sensor_commands:=false
+    sim_gz:=false
     sim_gazebo:=false
     sim_ignition:=false
     sim_isaac:=false
@@ -51,6 +52,7 @@
       use_internal_bus_gripper_comm="${use_internal_bus_gripper_comm}"
       use_fake_hardware="${use_fake_hardware}"
       fake_sensor_commands="${fake_sensor_commands}"
+      sim_gz="${sim_gz}"
       sim_gazebo="${sim_gazebo}"
       sim_ignition="${sim_ignition}"
       sim_isaac="${sim_isaac}"

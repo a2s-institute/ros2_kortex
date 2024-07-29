@@ -23,6 +23,7 @@
   <xacro:arg name="use_internal_bus_gripper_comm" default="false" />
   <xacro:arg name="use_fake_hardware" default="false" />
   <xacro:arg name="fake_sensor_commands" default="false" />
+  <xacro:arg name="sim_gz" default="false" />
   <xacro:arg name="sim_gazebo" default="false" />
   <xacro:arg name="sim_ignition" default="false" />
   <xacro:arg name="sim_isaac" default="false" />
@@ -65,6 +66,7 @@
     prefix="$(arg prefix)"
     use_fake_hardware="$(arg use_fake_hardware)"
     fake_sensor_commands="$(arg fake_sensor_commands)"
+    sim_gz="$(arg sim_gz)"
     sim_gazebo="$(arg sim_gazebo)"
     sim_ignition="$(arg sim_ignition)"
     sim_isaac="$(arg sim_isaac)"
