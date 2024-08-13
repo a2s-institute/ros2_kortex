@@ -68,6 +68,10 @@
           <param name="min">{-2*pi}</param>
           <param name="max">{2*pi}</param>
         </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
+        </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_1']}</param>
         </state_interface>
@@ -78,6 +82,10 @@
         <command_interface name="position">
           <param name="min">-2.41</param>
           <param name="max">2.41</param>
+        </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_2']}</param>
@@ -90,6 +98,10 @@
           <param name="min">{-2*pi}</param>
           <param name="max">{2*pi}</param>
         </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
+        </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_3']}</param>
         </state_interface>
@@ -100,6 +112,10 @@
         <command_interface name="position">
           <param name="min">-2.66</param>
           <param name="max">2.66</param>
+        </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_4']}</param>
@@ -112,6 +128,10 @@
           <param name="min">{-2*pi}</param>
           <param name="max">{2*pi}</param>
         </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
+        </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_5']}</param>
         </state_interface>
@@ -122,6 +142,10 @@
         <command_interface name="position">
           <param name="min">-2.23</param>
           <param name="max">2.23</param>
+        </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_6']}</param>
@@ -134,6 +158,10 @@
           <param name="min">{-2*pi}</param>
           <param name="max">{2*pi}</param>
         </command_interface>
+          <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
+        </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['joint_7']}</param>
         </state_interface>
@@ -144,8 +172,13 @@
         <xacro:if value="${use_internal_bus_gripper_comm}">
           <joint name="${prefix}${gripper_joint_name}">
             <command_interface name="position" />
+              <command_interface name="effort">
+          <param name="min">-1e+100</param>
+          <param name="max">1e+100</param>
+        </command_interface>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
+            <state_interface name="effort"/>
           </joint>
         </xacro:if>
       </xacro:unless>
